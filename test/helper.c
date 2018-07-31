@@ -43,3 +43,30 @@ int op_p(va_list ap)
 	count++;
 	return (count);
 }
+int op_d(va_list ap)
+{
+	int count = 0;
+	int mod = 1;
+	int i = 0;
+	if (ap < 0)
+	{
+		putchar('-');
+		ap = ap * -1;
+		count++;
+	}
+	else
+	{
+		while (ap / mod > 9)
+		{
+			mod = mod * 10;
+		}
+		while (mod > 0)
+		{
+			putchar(ap / mod + '0');
+			ap = ap % mod;
+			mod = mod / 10;
+			count++;
+		}
+	}
+	return (count);
+}
