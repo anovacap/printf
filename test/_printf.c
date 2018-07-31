@@ -26,7 +26,6 @@ int _printf(const char *format, ...)
 		}
 
 		format++;
-		va_arg(args, int);
 
 		count += *get_sel(*format)(args);
 		i++;

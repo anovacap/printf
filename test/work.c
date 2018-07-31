@@ -5,7 +5,7 @@
  *
  *
  */
-int (*get_sel(char *s))(va_list)
+int (*get_sel(char s))(va_list)
 {
 	int i;
 	fs format[] = {
