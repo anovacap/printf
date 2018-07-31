@@ -7,7 +7,7 @@ _printf \- a limited printf()
 _printf [const char *format, ...]
 .SH DESCRIPTION
 The function _printf() produces output according to a format. Writes output to stdout, the standard output stream.
-Upon successful return, _printf returns the number of characters printed not including the NULL byte ('\0').
+Upon successful return, _printf returns the number of characters printed not including the NULL byte ('\\0').
 If an output error is encountered, a negative value is returned.
 .SH FLAGS
 The character '%' is followed by one the following flags.
