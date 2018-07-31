@@ -47,23 +47,24 @@ int op_d(va_list ap)
 {
 	int count = 0;
 	int mod = 1;
-	int i = 0;
-	if (ap < 0)
+	int d;
+	d = va_arg(ap, int);
+	if (d < 0)
 	{
-		putchar('-');
-		ap = ap * -1;
+		_putchar('-');
+		d = d * -1;
 		count++;
 	}
 	else
 	{
-		while (ap / mod > 9)
+		while (d / mod > 9)
 		{
 			mod = mod * 10;
 		}
 		while (mod > 0)
 		{
-			putchar(ap / mod + '0');
-			ap = ap % mod;
+			_putchar(d / mod + '0');
+			d = d % mod;
 			mod = mod / 10;
 			count++;
 		}
