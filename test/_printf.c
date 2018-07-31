@@ -21,11 +21,18 @@ int _printf(const char *format, ...)
 			format++;
 			continue;
 		}
-
 		format++;
+
+		if (*format == '\0')
+		{
+			_putchar('%');
+			_putchar('\n');
+			break;
+		}
 
 		count += (*get_sel(*format))(args);
 		format++;
 	}
+	va_end(args);
 	return (count);
 }
