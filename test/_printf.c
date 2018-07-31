@@ -15,19 +15,17 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*format != '\0')
 	{
-		if (*format != '\0')
-			count++;
-
 		if (*format != '%')
 		{
 			_putchar(*format);
+			count++;
 			format++;
 			continue;
 		}
 
 		format++;
 
-		count += *get_sel(*format)(args);
+		count += (*get_sel(*format))(args);
 		i++;
 	}
 	return (count);
