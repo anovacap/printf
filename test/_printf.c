@@ -11,8 +11,21 @@ int _printf(const char *format, ...);
 	va_list args;
 
 	va_start(format, args);
-	while (format[i] != '\0')
+	while (*format != '\0')
 	{
+		if (*format != '\0')
+			count++;
+
+		if (*format != '%')
+		{
+			_putchar(*format);
+			format++;
+			continue;
+		}
+
+		format++;
 		get_sel(format)(args);
 		i++;
 	}
+
+}
