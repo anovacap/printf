@@ -12,6 +12,8 @@ int (*get_sel(char s))(va_list)
 		{'c', op_c},
 		{'s', op_s},
 		{'%', op_p},
+		{'d', op_d},
+		{'i', op_d},
 		{'\0', NULL}
 	};
 

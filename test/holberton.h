@@ -16,6 +16,6 @@ int (*get_sel(char s))(va_list);
 int op_c(va_list ap);
 int op_s(va_list ap);
 int op_p(va_list ap);
-
+int op_d(va_list ap);
 
 #endif /* _HOLBERTON_H_ */
