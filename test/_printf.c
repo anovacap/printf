@@ -8,7 +8,6 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
 	int count = 0;
 	va_list args;
 
@@ -26,7 +25,7 @@ int _printf(const char *format, ...)
 		format++;
 
 		count += (*get_sel(*format))(args);
-		i++;
+		format++;
 	}
 	return (count);
 }

@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "holberton.h"
 
 /**
@@ -8,16 +7,15 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char *c)
+int _putchar(char c)
 {
         return (write(1, &c, 1));
-	return (0);
 }
 
 int op_c(va_list ap)
 {
 	int count = 0;
-	_putchar(va_arg(ap, int);
+	_putchar(va_arg(ap, int));
 	count++;
 	return (count);
 }
@@ -25,7 +23,9 @@ int op_c(va_list ap)
 int op_s(va_list ap)
 {
 	int i = 0;
+	char *str;
 	int count = 0;
+
 	str = va_arg(ap, char*);
 	while (str[i] != '\0')
 	{

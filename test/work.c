@@ -11,11 +11,12 @@ int (*get_sel(char s))(va_list)
 	fs format[] = {
 		{'c', op_c},
 		{'s', op_s},
-		{'%', op_p}
+		{'%', op_p},
+		{'\0', NULL}
 	};
 
 	i = 0;
-	while (format[i].spec)
+	while (format[i].spec != '\0')
 	{
 		if (format[i].spec == s)
 			return (format[i].f);
