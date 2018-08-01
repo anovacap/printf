@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * get_sel - selects function for _printf
- * @s: type identifier
- * Return: integer
+ *
+ *
+ *
  */
 int (*get_sel(char s))(va_list)
 {
