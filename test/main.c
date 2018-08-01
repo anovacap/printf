@@ -31,5 +31,10 @@ int main(void)
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
 
+	_printf("%d\n", INT_MAX);
+	_printf("%d\n", INT_MIN);
+
+
+
 	return (0);
 }
