@@ -4,6 +4,11 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct format_specifiers - creates structs that selects functions
+ * @spec: types
+ * @f: associated functions
+ */
 typedef struct format_specifiers
 {
 	char spec;

@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-	int len;
+/*	int len;
 	int len2;
-	int a, b;
+	int a, b, z, x;
 	char s[] = "Dolly";
 
 	len = _printf("Let's try to printf a simple sentence.\n");
@@ -19,6 +19,14 @@ int main(void)
 	printf("%c\n", 'A');
 	_printf("%c\n", 'A');
 	_printf("%");
+	z = _printf("%");
+	printf("%i", z);
+	printf("%");
+	x = printf("%");
+	printf("%i", x);*/
+	_printf("%%\n");
+/*	printf("%a%b\n");
+	printf("%i", z);
 	printf("%");
 	a = _printf("hello %s\n", s);
 	printf("%i\n", a);
@@ -30,9 +38,8 @@ int main(void)
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
 	printf("Negative:[%d]\n", -762534);
-
 	_printf("%d\n", INT_MAX);
-	_printf("%d\n", INT_MIN);
+	_printf("%d\n", INT_MIN);*/
 
 
 

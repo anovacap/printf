@@ -25,15 +25,24 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		format++;
-
 		if (*format == '\0')
 		{
-			_putchar('%');
-			_putchar('\n');
-			break;
+			return (-1);
 		}
-
-		count += (*get_sel(*format))(args);
+		if (*format != 'c' && *format != 's' && *format != 'd'
+		    && *format != 'i' && *format != '%')
+		{
+			_putchar('%');
+			_putchar(*format);
+			format++;
+			continue;
+		}
+		if (*format == '%')
+		{
+			_putchar(*format);
+			continue;
+		}
+			count += (*get_sel(*format))(args);
 		format++;
 	}
 	va_end(args);
