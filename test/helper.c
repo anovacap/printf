@@ -77,22 +77,25 @@ int op_d(va_list ap)
 	int count = 0;
 	int mod = 1;
 	int d;
+	unsigned int di;
 
 	d = va_arg(ap, int);
 	if (d < 0)
 	{
 		_putchar('-');
-		d = d * -1;
+		di = d * -1;
 		count++;
 	}
-	while (d / mod > 9)
+	else
+		di = d;
+	while (di / mod > 9)
 	{
 		mod = mod * 10;
 	}
 	while (mod > 0)
 	{
-		_putchar(d / mod + '0');
-		d = d % mod;
+		_putchar(di / mod + '0');
+		di = di % mod;
 		mod = mod / 10;
 		count++;
 	}
