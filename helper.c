@@ -9,17 +9,30 @@
  */
 int _putchar(char c)
 {
-        return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
+/**
+ * op_c - character specifier and print
+ * @ap: argument pointer
+ *
+ * Return: count
+ */
 int op_c(va_list ap)
 {
 	int count = 0;
+
 	_putchar(va_arg(ap, int));
 	count++;
 	return (count);
 }
 
+/**
+ * op_s - string specifier and print
+ * @ap: argument pointer
+ *
+ * Return: count
+ */
 int op_s(va_list ap)
 {
 	int i = 0;
@@ -38,19 +51,33 @@ int op_s(va_list ap)
 	return (count);
 }
 
+/**
+ * op_p - % specifier and print
+ * @ap: argument pointer
+ *
+ * Return: count
+ */
 int op_p(va_list ap)
 {
 	int count = 0;
+
 	_putchar(va_arg(ap, int));
 	count++;
 	return (count);
 }
 
+/**
+ * op_d - digit specifier and print
+ * @ap: argument pointer
+ *
+ * Return: count
+ */
 int op_d(va_list ap)
 {
 	int count = 0;
 	int mod = 1;
 	int d;
+
 	d = va_arg(ap, int);
 	if (d < 0)
 	{
