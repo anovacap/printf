@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			_putchar(*format);
+			format++;
 			continue;
 		}
 			count += (*get_sel(*format))(args);
