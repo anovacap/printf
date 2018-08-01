@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * get_sel - selects functions to for _printf
+ * @s: character that selects
+ * Return: pointer to function
  */
 int (*get_sel(char s))(va_list)
 {
