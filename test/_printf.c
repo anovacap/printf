@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			return (-1);
 		}
 		if (*format != 'c' && *format != 's' && *format != 'd'
-		    && *format != 'i' && *format != '%')
+		     && *format != 'i' && *format != '%')
 		{
 			_putchar('%');
 			_putchar(*format);
