@@ -27,6 +27,8 @@ int op_s(va_list ap)
 	int count = 0;
 
 	str = va_arg(ap, char*);
+	if (!str)
+		str = "(null)";
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
@@ -65,7 +67,7 @@ int op_d(va_list ap)
 		_putchar(d / mod + '0');
 		d = d % mod;
 		mod = mod / 10;
-		count++;x
+		count++;
 	}
 	return (count);
 }
